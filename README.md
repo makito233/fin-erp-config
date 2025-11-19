@@ -9,7 +9,6 @@ A visual editor for SAP order payload mapping configurations. This tool allows y
 - **Test Simulator**: Test your configurations with sample data and preview generated SAP payloads
 - **SpEL Expression Support**: Full support for Spring Expression Language with validation
 - **Import/Export**: Upload existing YAML configurations and download modified versions
-- **Responsive Design**: Works on desktop and tablet devices
 
 ## Getting Started
 

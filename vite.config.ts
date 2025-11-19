@@ -2,11 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
-const repoBase = '/fin-erp-yml-config/'
-const base = process.env.NODE_ENV === 'production' ? repoBase : '/'
-
 export default defineConfig({
-  base,
+  base: './',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -23,3 +20,4 @@ export default defineConfig({
     },
   },
 })
+
