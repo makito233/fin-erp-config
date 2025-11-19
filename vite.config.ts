@@ -2,9 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
-const isUserOrOrgSite = repoName.endsWith('.github.io')
-const base = isUserOrOrgSite || repoName === '' ? '/' : `/${repoName}/`
+const repoBase = '/fin-erp-yml-config/'
+const base = process.env.NODE_ENV === 'production' ? repoBase : '/'
 
 export default defineConfig({
   base,
