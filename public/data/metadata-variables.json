@@ -1,0 +1,234 @@
+[
+  {
+    "name": "#cityCodeValue",
+    "type": "context_value",
+    "description": "Context value computed from order data",
+    "examples": [
+      "#cityCodeValue\n"
+    ]
+  },
+  {
+    "name": "#currencyCodeValue",
+    "type": "context_value",
+    "description": "Context value computed from order data",
+    "examples": [
+      "#currencyCodeValue\n"
+    ]
+  },
+  {
+    "name": "#financialSourceCountryCodeValue",
+    "type": "context_value",
+    "description": "Context value computed from order data",
+    "examples": [
+      "#financialSourceCountryCodeValue\n",
+      "\"glovo \" + #financialSourceCountryCodeValue\n"
+    ]
+  },
+  {
+    "name": "#input.operation.name",
+    "type": "operation",
+    "description": "Operation type (e.g., cancel, complete)",
+    "examples": [
+      "#input.operation.name().toLowerCase()\n",
+      "(\n  #input.operation.name().toLowerCase() == 'cancel'\n  ? 0\n  : (\n      (#invoicingItems['PRODUCTS_R"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.customerCancellationStrategy",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata?.customerCancellationStrategy\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.handlingStrategy",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "{\n  'GEN1': (\n    (#invoicingItems['PRODUCTS_TO_PARTNER']?.netAmount?.value ?: 0)\n    + (#invoicingI",
+      "{\n  'GEN1': (\n    (#invoicingItems['PRODUCTS_TO_PARTNER']?.grossAmount?.value ?: 0)\n    + (#invoicin",
+      "{\n  'PICKUP': ((#invoicingItems['PROMOTION_PRODUCT_TO_CUSTOMER']?.grossAmount?.value ?: 0)),\n  'GEN1"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.partnerCancellationStrategy",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata?.partnerCancellationStrategy\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.partnerFamily?.toLowerCase",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "(\n  'mcdonalds' == #input.orderMetadata?.partnerFamily?.toLowerCase()\n  ? (\n    (#invoicingItems['PR"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.payments",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "(#input.orderMetadata?.payments?.![paymentMethod]?.stream()?.distinct()?.count() ?: 0) > 1 ? 'Mix' :",
+      "#input.orderMetadata?.payments\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.subvertical",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "(\n  (\n    (#input.orderMetadata?.vertical == null)\n    or (#input.orderMetadata?.vertical?.toUpperCa"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.subvertical?.toUpperCase",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "(\n  (\n    (#input.orderMetadata?.vertical == null)\n    or (#input.orderMetadata?.vertical?.toUpperCa"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.vertical",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "(\n  (\n    (#input.orderMetadata?.vertical == null)\n    or (#input.orderMetadata?.vertical?.toUpperCa"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata?.vertical?.toUpperCase",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "(\n  (\n    (#input.orderMetadata?.vertical == null)\n    or (#input.orderMetadata?.vertical?.toUpperCa"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata.finalStatusDateTime",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata.finalStatusDateTime ?: #input.orderMetadata.orderCreationTime\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata.handlingStrategy",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "{\n  'GEN1': 'Restaurant',\n  'GEN2': 'Glovo',\n  'PICKUP': 'Selfpick'\n}[#input.orderMetadata.handlingS"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata.orderCode",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata.orderCode\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata.orderCreationTime",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata.orderCreationTime\n",
+      "#input.orderMetadata.finalStatusDateTime ?: #input.orderMetadata.orderCreationTime\n",
+      "#input.orderMetadata.orderDispatchingTime ?: #input.orderMetadata.orderCreationTime\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata.orderDispatchingTime",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata.orderDispatchingTime ?: #input.orderMetadata.orderCreationTime\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata.orderId.toString",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata.orderId.toString()\n"
+    ]
+  },
+  {
+    "name": "#input.orderMetadata.storeAddressId?.toString",
+    "type": "order_metadata",
+    "description": "Order metadata field from the input",
+    "examples": [
+      "#input.orderMetadata.storeAddressId?.toString()\n"
+    ]
+  },
+  {
+    "name": "#input.processingTime",
+    "type": "processing_time",
+    "description": "When the order was processed",
+    "examples": [
+      "#input.processingTime\n"
+    ]
+  },
+  {
+    "name": "#input.shouldIncludeMarketplaceItemsOnly",
+    "type": "input_field",
+    "description": "Input field from order data",
+    "examples": [
+      "#input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['DELIVERY_FEE_BY_GLOVO']?.grossAmo",
+      "#input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['DELIVERY_FEE_BY_GLOVO']?.netAmoun",
+      "#input.shouldIncludeMarketplaceItemsOnly() ? 0 : (#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER"
+    ]
+  },
+  {
+    "name": "#isVatOptimisedOrder",
+    "type": "boolean_flag",
+    "description": "Boolean flag derived from order properties",
+    "examples": [
+      "(\n  (#isVatOptimisedOrder)\n  ? ((#invoicingItems['MPL_DELIVERY_FEE_BY_GLOVO']?.netAmount?.value ?: 0",
+      "(\n  (#isVatOptimisedOrder)\n  ? ((#invoicingItems['MINIMUM_BASKET_SURCHARGE_TO_CUSTOMER']?.netAmount?",
+      "(#isVatOptimisedOrder) ? ((#invoicingItems['BAD_WEATHER_SURCHARGE_TO_CUSTOMER']?.netAmount?.value ?:"
+    ]
+  },
+  {
+    "name": "#item",
+    "type": "array_item",
+    "description": "Reference to the current item inside an array mapping (e.g., Payments array)",
+    "examples": [
+      "#item",
+      "#item.amount",
+      "#item.paymentMethod"
+    ]
+  },
+  {
+    "name": "#item.amount",
+    "type": "array_item",
+    "description": "Amount of the current payment item",
+    "examples": [
+      "#item.amount",
+      "(#item.amount ?: 0)"
+    ]
+  },
+  {
+    "name": "#item.paymentMethod",
+    "type": "array_item",
+    "description": "Payment method of the current payment item",
+    "examples": [
+      "#item.paymentMethod",
+      "(#item.paymentMethod?.toUpperCase() == 'CASH') ? 'offline' : 'online'"
+    ]
+  },
+  {
+    "name": "#item.clearingProvider",
+    "type": "array_item",
+    "description": "Clearing provider of the current payment item",
+    "examples": [
+      "#item.clearingProvider",
+      "#item.paymentMethod"
+    ]
+  }
+]

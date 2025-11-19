@@ -1,0 +1,22 @@
+[
+  {
+    "code": "ES",
+    "status": "live"
+  },
+  {
+    "code": "PL",
+    "status": "live"
+  },
+  {
+    "code": "PT",
+    "status": "draft"
+  },
+  {
+    "code": "IT",
+    "status": "draft"
+  },
+  {
+    "code": "RO",
+    "status": "draft"
+  }
+]

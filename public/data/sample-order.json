@@ -1,0 +1,55 @@
+{
+  "input": {
+    "orderMetadata": {
+      "orderCode": "ABC123XYZ",
+      "orderId": 123456789,
+      "storeAddressId": 987654,
+      "handlingStrategy": "GEN2",
+      "orderCreationTime": "2024-01-15T14:30:00Z",
+      "finalStatusDateTime": "2024-01-15T15:45:00Z",
+      "orderDispatchingTime": "2024-01-15T14:45:00Z",
+      "vertical": "FOOD",
+      "subvertical": "RESTAURANT",
+      "partnerFamily": "independent",
+      "partnerCancellationStrategy": "FULL_REFUND",
+      "customerCancellationStrategy": "PARTIAL_REFUND",
+      "payments": [
+        {
+          "amount": 25.50,
+          "paymentMethod": "CARD"
+        }
+      ]
+    },
+    "operation": {
+      "name": "complete"
+    },
+    "processingTime": "2024-01-15T15:50:00Z"
+  },
+  "invoicingItems": {
+    "PRODUCTS_TO_PARTNER": {
+      "grossAmount": { "value": 20.00 },
+      "netAmount": { "value": 18.00 }
+    },
+    "DELIVERY_FEE_BY_GLOVO": {
+      "grossAmount": { "value": 3.50 },
+      "netAmount": { "value": 3.20 }
+    },
+    "TIP_TO_CUSTOMER": {
+      "grossAmount": { "value": 2.00 },
+      "netAmount": { "value": 2.00 }
+    },
+    "COMMISSION_TO_PARTNER": {
+      "grossAmount": { "value": 3.00 },
+      "netAmount": { "value": 2.70 }
+    },
+    "PROMOTION_PRODUCT_TO_CUSTOMER": {
+      "grossAmount": { "value": 2.50 },
+      "netAmount": { "value": 2.25 }
+    }
+  },
+  "financialSourceCountryCodeValue": "ES",
+  "currencyCodeValue": "EUR",
+  "cityCodeValue": "BCN",
+  "isVatOptimisedOrder": false
+}
+
