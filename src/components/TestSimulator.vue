@@ -203,16 +203,6 @@ function handleDataChange() {
                 </ElTabs>
             </div>
             </ElTabPane>
-            <ElTabPane label="RFC Generator" name="rfc" class="h-full">
-              <div class="h-full flex flex-col">
-                <RfcGenerator
-                  :config="configStore.config"
-                  :metadata-variables="configStore.metadataVariables"
-                  :supported-countries="availableCountries"
-                  :selected-country="selectedCountry"
-                />
-              </div>
-            </ElTabPane>
             <ElTabPane label="JSON View" name="json" class="h-full">
               <div class="json-display h-full overflow-auto p-4 bg-gray-900 text-gray-100">
             <pre><code>{{ JSON.stringify(testData, null, 2) }}</code></pre>
